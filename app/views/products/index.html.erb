@@ -8,12 +8,13 @@
     </tr>
   </thead>
   <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.title %></td>
-        <td><%= product.price %></td>
-        <td><%= product.stock_quantity %></td>
-      </tr>
-    <% end %>
+   <% @products.each do |product| %>
+  <tr>
+    <td><%= link_to product.title, product_path(product) %></td>
+    <td><%= product.description %></td>
+    <td><%= product.price %></td>
+    <td><%= product.stock_quantity %></td>
+  </tr>
+  <% end %>
   </tbody>
 </table>
